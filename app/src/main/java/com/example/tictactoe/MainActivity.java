@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void oneOne(View view) {
 
+        if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
                 oneView.setImageResource ( R.drawable.x );
                 currentPlayer = currentPlayer + 1;
@@ -71,150 +72,149 @@ public class MainActivity extends AppCompatActivity {
                 currentPlayer = currentPlayer + 1;
                 currentState.set ( 0, 2 );
             }
-        winnerResult = winner.winnerIs ( currentState );
-            if(winnerResult != null)
-            {
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
-
+        }
     }
     public void oneTwo(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            twoView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 1, 1 );
-        }
-        else {
-            twoView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 1, 2 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                twoView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 1, 1 );
+            } else {
+                twoView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 1, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
         }
 
 
 
     public void oneThree(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            threeView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 2, 1 );
-        }
-        else {
-            threeView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 2, 2 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                threeView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 2, 1 );
+            } else {
+                threeView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 2, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
     public void twoOne(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            fourView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 3, 1 );
-        }
-        else {
-            fourView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-           currentState.set ( 3, 2 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                fourView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 3, 1 );
+            } else {
+                fourView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 3, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
     public void twoTwo(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            fiveView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-           currentState.set ( 4, 1 );
-        }
-        else {
-            fiveView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 4, 2 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                fiveView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 4, 1 );
+            } else {
+                fiveView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 4, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
     public void twoThree(View view) {
-        if((currentPlayer % 2) == 0 ){
-            sixView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-           currentState.set ( 5, 1 );
-        }
-        else {
-            sixView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 5, 2 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                sixView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 5, 1 );
+            } else {
+                sixView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 5, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
     public void threeOne(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            sevenView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 6, 1 );
-        }
-        else {
-            sevenView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 6, 2 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                sevenView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 6, 1 );
+            } else {
+                sevenView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 6, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
     public void threeTwo(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            eightView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 7, 1 );
-        }
-        else {
-            eightView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 7, 2 );
-        }
-       winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                eightView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 7, 1 );
+            } else {
+                eightView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 7, 2 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
     public void threeThree(View view) {
-        if((currentPlayer % 2) == 0 ) {
-            nineView.setImageResource ( R.drawable.x );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 8, 1 );
-        }
-        else {
-            nineView.setImageResource ( R.drawable.o );
-            currentPlayer = currentPlayer +1;
-            currentState.set ( 8, 12 );
-        }
-        winnerResult = winner.winnerIs ( currentState );
-        if(winnerResult != null)
-        {
-            result.setText ( winnerResult );
+        if(winnerResult == null) {
+            if ((currentPlayer % 2) == 0) {
+                nineView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 8, 1 );
+            } else {
+                nineView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 1;
+                currentState.set ( 8, 12 );
+            }
+            winnerResult = winner.winnerIs ( currentState );
+            if (winnerResult != null) {
+                result.setText ( winnerResult );
+            }
         }
     }
 
@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
         eightView.setImageResource ( R.drawable.empty );
         nineView.setImageResource ( R.drawable.empty );
         currentPlayer = 0;
-
+        winnerResult = null;
 
         if( currentState.get ( 0 ) == null)
         {
