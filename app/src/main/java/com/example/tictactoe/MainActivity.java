@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button playButton;
     Integer currentPlayer = 0;
     private Switch aSwitch;
+    private Switch aSwitch2;
     TextView result;
     String winnerResult = null;
     ArrayList<Integer>currentState;
@@ -50,8 +51,21 @@ public class MainActivity extends AppCompatActivity {
         nineView =findViewById(R.id.nineView);
         result = findViewById ( R.id.result );
         aSwitch = findViewById ( R.id.switch1);
+        aSwitch2 = findViewById ( R.id.switch2);
 
 
+        aSwitch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    xOSelect ();
+
+                }else{
+
+                    xOSelect ();
+                }
+            }
+        });
 
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -76,6 +90,15 @@ public class MainActivity extends AppCompatActivity {
 
     WhoWin winner = new WhoWin ();
     ComputerActivity pc = new ComputerActivity ();
+    void xOSelect()
+    {
+        if (aSwitch2.isChecked () == true){
+            currentPlayer = 1;
+        }
+        else {
+            currentPlayer = 0;
+        }
+    }
 
 
     void currentShower(){
@@ -377,6 +400,7 @@ public class MainActivity extends AppCompatActivity {
         result.setText ( "Nobody" );
         currentPlayer = 0;
         winnerResult = null;
+        xOSelect ();
 
         if( currentState.get ( 0 ) == null)
         {
