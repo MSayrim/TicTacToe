@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -57,22 +56,104 @@ public class MainActivity extends AppCompatActivity {
             }
 
     WhoWin winner = new WhoWin ();
+    ComputerActivity pc = new ComputerActivity ();
 
 
+    void currentShower(){
+
+
+
+        if(currentState.get ( 0 ).equals ( 1 ))
+        {
+            oneView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 1 ).equals ( 1 ))
+        {
+            twoView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 2 ).equals ( 1 ))
+        {
+            threeView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 3 ).equals ( 1 ))
+        {
+            fourView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 4 ).equals ( 1 ))
+        {
+            fiveView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 5 ).equals ( 1 ))
+        {
+            sixView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 6 ).equals ( 1 ))
+        {
+            sevenView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 7 ).equals ( 1 ))
+        {
+            eightView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 8 ).equals ( 1 ))
+        {
+            nineView.setImageResource ( R.drawable.x );
+        }
+        if(currentState.get ( 0 ).equals ( 2 ))
+        {
+            oneView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 1 ).equals ( 2 ))
+        {
+            twoView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 2 ).equals ( 2 ))
+        {
+            threeView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 3 ).equals ( 2 ))
+        {
+            fourView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 4 ).equals ( 2 ))
+        {
+            fiveView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 5 ).equals ( 2 ))
+        {
+            sixView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 6 ).equals ( 2 ))
+        {
+            sevenView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 7 ).equals ( 2 ))
+        {
+            eightView.setImageResource ( R.drawable.o );
+        }
+        if(currentState.get ( 8 ).equals ( 2 ))
+        {
+            nineView.setImageResource ( R.drawable.o );
+        }
+
+    }
 
     public void oneOne(View view) {
 
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                oneView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+                //oneView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 0, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                oneView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+               // oneView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 0, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -81,35 +162,43 @@ public class MainActivity extends AppCompatActivity {
     public void oneTwo(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                twoView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+                //twoView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 1, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                twoView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+                //twoView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 1, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
         }
-        }
+
+
+    }
 
 
 
     public void oneThree(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                threeView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+              //  threeView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 2, 1 );
+               pc.pcMove2 ( currentState );
             } else {
-                threeView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+               // threeView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 2, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -118,15 +207,18 @@ public class MainActivity extends AppCompatActivity {
     public void twoOne(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                fourView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+               // fourView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 3, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                fourView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+               // fourView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 3, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -135,15 +227,18 @@ public class MainActivity extends AppCompatActivity {
     public void twoTwo(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                fiveView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+               // fiveView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 4, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                fiveView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+               // fiveView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 4, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -152,15 +247,18 @@ public class MainActivity extends AppCompatActivity {
     public void twoThree(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                sixView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+              //  sixView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 5, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                sixView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+               // sixView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 5, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -169,15 +267,18 @@ public class MainActivity extends AppCompatActivity {
     public void threeOne(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                sevenView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+               // sevenView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 6, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                sevenView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+             //   sevenView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 6, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -186,15 +287,18 @@ public class MainActivity extends AppCompatActivity {
     public void threeTwo(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                eightView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+               // eightView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 7, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                eightView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
+              //  eightView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 7, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }
@@ -203,15 +307,18 @@ public class MainActivity extends AppCompatActivity {
     public void threeThree(View view) {
         if(winnerResult == null) {
             if ((currentPlayer % 2) == 0) {
-                nineView.setImageResource ( R.drawable.x );
-                currentPlayer = currentPlayer + 1;
+                //nineView.setImageResource ( R.drawable.x );
+                currentPlayer = currentPlayer + 2;
                 currentState.set ( 8, 1 );
+                pc.pcMove2 ( currentState );
             } else {
-                nineView.setImageResource ( R.drawable.o );
-                currentPlayer = currentPlayer + 1;
-                currentState.set ( 8, 12 );
+              //  nineView.setImageResource ( R.drawable.o );
+                currentPlayer = currentPlayer + 2;
+                currentState.set ( 8, 2 );
+                pc.pcMove1 ( currentState );
             }
             winnerResult = winner.winnerIs ( currentState );
+            currentShower ();
             if (winnerResult != null) {
                 result.setText ( winnerResult );
             }

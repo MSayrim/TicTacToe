@@ -55,6 +55,22 @@ public class WhoWin {
             winner = "o kazandı";
         }
 
+
+
+
+
+
+
+
+        if((gameResult.get ( 0 ) != 0) && (gameResult.get ( 1 ) != 0) && (gameResult.get ( 2 ) != 0) && (gameResult.get ( 3 ) != 0) && (gameResult.get ( 4 ) != 0) && (gameResult.get ( 5 ) != 0) && (gameResult.get ( 6 ) != 0) && (gameResult.get ( 7 ) != 0) && (gameResult.get ( 8 ) != 0 ))
+        {
+            if(winner == null) {
+                winner = "berabere";
+            }
+        }
+
+
+
         return winner;
     }
 }
